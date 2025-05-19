@@ -34,9 +34,9 @@
                                                     value="{{ $penulis->tanggal_lahir }}" disabled>
                                             </div>
                                             <div class="form-group mb-5 mt-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control"
-                                                    value="{{ $penulis->alamat }}" disabled>
+                                                <label>Biografi</label>
+                                                <input type="text" name="biografi_singkat" class="form-control"
+                                                    value="{{ $penulis->biografi_singkat }}" disabled>
                                             </div>
                                             <r>
                                                 <a href="{{ route('penulis.index') }}" class="btn btn-primary">Kembali Ke

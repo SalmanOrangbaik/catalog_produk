@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_penulis');
             $table->string('jenis_kelamin');
             $table->date('tanggal_lahir');
-            $table->text('alamat');
+            $table->text('biografi_singkat');
             $table->timestamps();
         });
     }

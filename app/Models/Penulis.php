@@ -8,7 +8,7 @@ class Penulis extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'nama_penulis', 'jenis_kelamin', 'tanggal_lahir', 'alamat'];
+    protected $fillable = ['id', 'nama_penulis', 'jenis_kelamin', 'tanggal_lahir', 'biografi_singkat'];
     public $timestamp   = true;
     protected $table    = 'penulis';
 

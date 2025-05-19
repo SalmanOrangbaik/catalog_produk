@@ -37,17 +37,17 @@ class PenulisController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nama_penulis'  => 'required|unique:penulis',
-            'jenis_kelamin' => 'required',
-            'tanggal_lahir' => 'required',
-            'alamat'        => 'required',
+            'nama_penulis'     => 'required|unique:penulis',
+            'jenis_kelamin'    => 'required',
+            'tanggal_lahir'    => 'required',
+            'biografi_singkat' => 'required',
 
         ]);
-        $penulis                = new Penulis;
-        $penulis->nama_penulis  = $request->nama_penulis;
-        $penulis->jenis_kelamin = $request->jenis_kelamin;
-        $penulis->tanggal_lahir = $request->tanggal_lahir;
-        $penulis->alamat        = $request->alamat;
+        $penulis                   = new Penulis;
+        $penulis->nama_penulis     = $request->nama_penulis;
+        $penulis->jenis_kelamin    = $request->jenis_kelamin;
+        $penulis->tanggal_lahir    = $request->tanggal_lahir;
+        $penulis->biografi_singkat = $request->biografi_singkat;
 
         $penulis->save();
 
@@ -88,17 +88,17 @@ class PenulisController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'nama_penulis'  => 'required',
-            'jenis_kelamin' => 'required',
-            'tanggal_lahir' => 'required',
-            'alamat'        => 'required',
+            'nama_penulis'     => 'required',
+            'jenis_kelamin'    => 'required',
+            'tanggal_lahir'    => 'required',
+            'biografi_singkat' => 'required',
 
         ]);
-        $penulis                = Penulis::findOrFail($id);
-        $penulis->nama_penulis  = $request->nama_penulis;
-        $penulis->jenis_kelamin = $request->jenis_kelamin;
-        $penulis->tanggal_lahir = $request->tanggal_lahir;
-        $penulis->alamat        = $request->alamat;
+        $penulis                   = Penulis::findOrFail($id);
+        $penulis->nama_penulis     = $request->nama_penulis;
+        $penulis->jenis_kelamin    = $request->jenis_kelamin;
+        $penulis->tanggal_lahir    = $request->tanggal_lahir;
+        $penulis->biografi_singkat = $request->biografi_singkat;
 
         $penulis->save();
         return redirect()->route('penulis.index');

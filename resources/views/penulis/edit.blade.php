@@ -52,10 +52,10 @@
                                                 @enderror
                                             </div>
                                             <div class="form-group mb-5 mt-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat"
-                                                    class="form-control  @error('alamat') is-invalid @enderror"
-                                                    value="{{ $penulis->alamat }}">
+                                                <label>Biografi</label>
+                                                <input type="text" name="biografi_singkat"
+                                                    class="form-control  @error('biografi_singkat') is-invalid @enderror"
+                                                    value="{{ $penulis->biografi_singkat }}">
                                                 @error('nama_penulis')
                                                     <div class="invalid-feedback">{{ $message }}</div>
                                                 @enderror

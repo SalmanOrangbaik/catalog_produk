@@ -40,9 +40,9 @@
                                         </div>
                                         <div class="form-group mb-3 mt-3">
                                             <label>Deskripsi</label>
-                                            <textarea name="deskripsi" cols="30" rows="10" class="form-control" value="{{ $book->deskripsi }}" readonly> 
-                                                
-                                            </textarea>
+                                            <p > 
+                                               {!! $book->deskripsi ?? '' !!}
+                                            </p>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Kategori</label>

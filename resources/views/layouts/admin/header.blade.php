@@ -1,7 +1,7 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <a class="navbar-brand brand-logo" href="index.html">
-            <img src="{{asset('assets/images/logo.svg')}}" alt="logo" class="logo-dark" />
+            <h1>RiBook</h1>
             <img src="{{asset('assets/images/logo-light.svg')}}" alt="logo-light" class="logo-light">
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('assets/images/logo-mini.svg')}}" alt="logo" /></a>
@@ -17,7 +17,7 @@
             </li>
             <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle ms-2" src="{{asset('assets/images/faces/face5.jpg')}}" alt="Profile image"> <span class="font-weight-normal"> Evelyn </span></a>
+                <img class="img-xs rounded-circle ms-2" src="{{asset('assets/images/faces/face5.jpg')}}" alt="Profile image"> <span class="font-weight-normal">{{Auth::user()->name}}  </span></a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 @auth
                   <form action="{{route('logout')}}" method="POST">

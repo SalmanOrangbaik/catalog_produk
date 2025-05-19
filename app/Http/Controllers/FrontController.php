@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Book;
+
 class FrontController extends Controller
 {
     public function index()
@@ -8,4 +10,5 @@ class FrontController extends Controller
         $book = Book::all();
         return view('welcome', compact('book'));
     }
+
 }

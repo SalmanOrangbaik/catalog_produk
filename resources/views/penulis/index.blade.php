@@ -30,7 +30,6 @@
                                                 <th>Nama Penulis </th>
                                                 <th>Jenis Kelamin</th>
                                                 <th>Tanggal Lahir</th>
-                                                <th>Alamat</th>
                                                 <th>Aksi</th>
                                             </thead>
                                             <tbody>
@@ -41,7 +40,6 @@
                                                         <td>{{ $data->nama_penulis }}</td>
                                                         <td>{{ $data->jenis_kelamin }}</td>
                                                         <td>{{ $data->tanggal_lahir }}</td>
-                                                        <td>{{ $data->alamat }}</td>
                                                         <td>
                                                             <form action="{{ route('penulis.destroy', $data->id) }}"
                                                                 method="POST">

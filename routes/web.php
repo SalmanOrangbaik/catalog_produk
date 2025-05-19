@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PenulisController;
@@ -21,12 +22,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [FrontController::class, 'index']);
 
 Route::prefix('admin')->middleware('auth')->group(function () {
-
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //kategori
     Route::resource('kategori', KategoriController::class);

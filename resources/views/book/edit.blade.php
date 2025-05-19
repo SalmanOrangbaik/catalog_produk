@@ -29,13 +29,15 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Buku</label>
-                                            <input type="text" name="nama_buku" class="form-control @error('nama_buku') is-invalid @enderror"
-                                                value="{{ $book->nama_buku }}" >
+                                            <input type="text" name="nama_buku"
+                                                class="form-control @error('nama_buku') is-invalid @enderror"
+                                                value="{{ $book->nama_buku }}">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="">Penulis</label>
-                                            <select name="id_penulis" class="form-control @error('nama_penulis') is-invalid @enderror">
+                                            <select name="id_penulis"
+                                                class="form-control @error('nama_penulis') is-invalid @enderror">
                                                 @foreach ($penulis as $data)
                                                     <option value="{{ $data->id }}"
                                                         {{ $data->id == $book->id_penulis ? 'selected' : '' }}>
@@ -43,9 +45,10 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <label for="">Genre</label>
-                                            <select name="id_genre" class="form-control @error('nama_genre') is-invalid @enderror">
+                                            <select name="id_genre"
+                                                class="form-control @error('nama_genre') is-invalid @enderror">
                                                 @foreach ($genre as $data)
                                                     <option value="{{ $data->id }}"
                                                         {{ $data->id == $book->id_genre ? 'selected' : '' }}>
@@ -55,14 +58,24 @@
                                         </div>
                                         <div>
                                             <label>Deskripsi</label>
-                                            <textarea name="deskripsi" maxlength="100" class="form-control @error('deskripsi') is-invalid @enderror" cols="30" rows="10"value="{{ $book->deskripsi }}"  >
-
+                                            <textarea name="deskripsi" maxlength="100" class="form-control @error('deskripsi') is-invalid @enderror" cols="30"
+                                                rows="10"value="{{ $book->deskripsi }}" id="editor" >
+                                                {{$book->deskripsi ?? ''}}
                                             </textarea>
-                                                
+                                            <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+                                            <script>
+                                                ClassicEditor
+                                                    .create(document.querySelector('#editor'))
+                                                    .catch(error => {
+                                                        console.error(error);
+                                                    });
+                                            </script>
+
                                         </div>
                                         <div class="form-group mt-3">
                                             <label for="">Kategori</label>
-                                            <select name="id_kategori" class="form-control @error('nama_kategori') is-invalid @enderror">
+                                            <select name="id_kategori"
+                                                class="form-control @error('nama_kategori') is-invalid @enderror">
                                                 @foreach ($kategori as $data)
                                                     <option value="{{ $data->id }}"
                                                         {{ $data->id == $book->id_kategori ? 'selected' : '' }}>
@@ -72,13 +85,15 @@
                                         </div>
                                         <div>
                                             <label>Stok</label>
-                                            <input type="number" name="stok" class="form-control @error('stok') is-invalid @enderror"
-                                                value="{{ $book->stok }}" >
+                                            <input type="number" name="stok"
+                                                class="form-control @error('stok') is-invalid @enderror"
+                                                value="{{ $book->stok }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Harga</label>
-                                            <input type="number" name="harga" class="form-control @error('harga') is-invalid @enderror"
-                                                value="{{ $book->harga }}" >
+                                            <input type="number" name="harga"
+                                                class="form-control @error('harga') is-invalid @enderror"
+                                                value="{{ $book->harga }}">
                                         </div>
                                         <r>
                                             <button type="submit" class="btn btn-primary mb-3 mt-2">Simpan</button>

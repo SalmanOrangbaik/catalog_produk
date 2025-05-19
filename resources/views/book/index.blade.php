@@ -10,8 +10,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-15">
                             <div class="card">
-                                <a href="{{ route('book.create') }}" class="btn btn-outline-dark"
-                                    style="float: right">Tambah Data</a>
+                                <a href="{{ route('book.create') }}" class="btn btn-outline-dark">Tambah Data</a>
                                 <div class="card-body">
                                     @if (session('success'))
                                         <div class="alert alert-success alert-dimissible fade show" role="alert">
@@ -39,13 +38,16 @@
                                             @foreach ($book as $data)
                                                 <tr>
                                                     <td scope="row">{{ $no++ }}</td>
-                                                    <td><img src="{{ asset('storage/buku/' . $data->foto) }}" alt="Foto Buku"
+                                                    <td><img src="{{ asset('storage/buku/' . $data->foto) }}"
+                                                            alt="Foto Buku"
                                                             style="width: 150px; height: 250px; object-fit: cover; border-radius: 4px;">
                                                     </td>
                                                     <td>{{ $data->nama_buku }}</td>
                                                     <td>{{ $data->penulis->nama_penulis }}</td>
                                                     <td>{{ $data->genre->nama_genre }}</td>
-                                                    <td>{{ $data->deskripsi }}</td>
+                                                    <td title="{{ $data->deskripsi }}">
+                                                        {!! \Illuminate\Support\Str::limit($data->deskripsi, 21) !!}
+                                                    </td>
                                                     <td>{{ $data->kategori->nama_kategori }}</td>
                                                     <td>{{ $data->stok }}</td>
                                                     <td>{{ $data->harga }}</td>
