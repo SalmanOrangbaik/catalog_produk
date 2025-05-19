@@ -106,23 +106,16 @@
                         <div class="card h-100">
                             <a href="shop-single.html">
                                 <img src="{{ asset('storage/buku/' . $data->foto) }}" alt="Foto Buku"
-                                    style="width: 414px; height: 600px; object-fit: cover; border-radius: 4px;">
+                                    style="width: 414px; height: 600px;">
                             </a>
                             <div class="card-body">
                                 <ul class="list-unstyled d-flex justify-content-between">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
                                     <li class="text-muted text-right">{{ $data->harga }}</li>
                                 </ul>
                                 <a href="shop-single.html"
                                     class="h2 text-decoration-none text-dark">{{ $data->nama_buku }}</a>
                                 <p class="card-text">
-                                    
+                                    {!! $data->deskripsi ?? '' !!}
                                 </p>
 
                             </div>
