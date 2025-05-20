@@ -21,5 +21,11 @@ class FrontController extends Controller
         $book = Book::findOrFail($id);
         return view('details', compact('book'));
     }
+    public function book($id)
+    {
+        $book     = Book::where('id_kategori', $id)->get();
+        $kategori = Kategori::all();
+        return view('produk', compact('book', 'kategori'));
+    }
 
 }

@@ -16,7 +16,7 @@
                             <div class="row p-5">
                                 <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                                     <a href="{{ route('detail', $data->id) }}">
-                                    <img class="img-fluid"
+                                    <img
                                          src="{{ asset('storage/buku/' . $data->foto) }}"
                                          style="max-width: 50%; margin-left: 20%;" alt="">
                                 </div>

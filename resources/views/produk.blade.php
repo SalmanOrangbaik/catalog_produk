@@ -44,7 +44,7 @@
                     <div class="card mb-4 product-wap rounded-0">
                         <div class="card rounded-0">
                             <img src="{{ asset('storage/buku/' . $data->foto) }}" alt="Foto Buku"
-                                    style="width: 294px; height: 400px;">
+                                    style="auto">
                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
                                     <li><a class="btn btn-success text-white mt-2" href="{{route('detail',$data->id)}}"><i class="far fa-eye"></i></a></li>
