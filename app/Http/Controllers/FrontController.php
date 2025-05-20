@@ -7,8 +7,19 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $book = Book::all();
+        $book = Book::take(3)->get();
         return view('welcome', compact('book'));
+    }
+
+    public function produk()
+    {
+        $book = Book::all();
+        return view('produk', compact('book'));
+    }
+    public function details($id)
+    {
+        $book = Book::findOrFail($id);
+        return view('details', compact('book'));
     }
 
 }

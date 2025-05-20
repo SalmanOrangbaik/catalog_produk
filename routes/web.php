@@ -25,6 +25,8 @@ Route::get('/', function () {
 Auth::routes(['register' => false]);
 
 Route::get('/', [FrontController::class, 'index']);
+Route::get('produk', [FrontController::class, 'produk']);
+Route::get('produk/{id}', [FrontController::class, 'details'])->name('detail');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
