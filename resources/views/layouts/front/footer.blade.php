@@ -4,11 +4,11 @@
         
         </div>
 
-        <div class="w-100 bg-black py-3">
+        <div class="w-100 bg-success py-3">
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        <p class="text-left text-light">
+                        <p class="text-left text-dark">
                             Copyright &copy; 2021 Company Name 
                             | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
                         </p>

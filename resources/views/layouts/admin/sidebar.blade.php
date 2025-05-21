@@ -5,11 +5,11 @@
             </li>
 
             <li class="nav-item nav-category">
-              <span class="nav-link">Dashboard</span>
+              <span class="nav-link">Beranda</span>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="home">
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Beranda</span>
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>

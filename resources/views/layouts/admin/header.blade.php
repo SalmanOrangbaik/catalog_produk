@@ -17,7 +17,7 @@
             </li>
             <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle ms-2" src="{{asset('assets/images/faces/face5.jpg')}}" alt="Profile image"> <span class="font-weight-normal">{{Auth::user()->name}}  </span></a>
+                <img class="img-xs rounded-circle ms-2" src="{{asset('assets/images/faces/face12.jpg')}}" alt="Profile image"> <span class="font-weight-normal">{{Auth::user()->name}}  </span></a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 @auth
                   <form action="{{route('logout')}}" method="POST">

@@ -54,11 +54,10 @@
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Recomended Book</h1>
-                    <p>
-                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident.
-                    </p>
+                    <h1 class="h1">Rekomendasi Buku</h1>
+                    <h5>
+                        Ini adalah buku-buku yang direkomendasikan
+                    </h5>
                 </div>
             </div>
             <div class="row">
@@ -74,7 +73,7 @@
                             </a>
                             <div class="card-body">
                                 <ul class="list-unstyled d-flex justify-content-between">
-                                    <li class="text-muted text-right">{{ $data->harga }}</li>
+                                    <li class="text-muted text-right">Rp.{{ $data->harga }}</li>
                                 </ul>
                                 <a href="shop-single.html"
                                     class="h2 text-decoration-none text-dark"><b>{{ $data->nama_buku }}</b></a>
