@@ -1,23 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-success navbar-light d-none d-lg-block" id="templatemo_nav_top">
-        <div class="container text-light">
-            <div class="w-100 d-flex justify-content-between" style="margin-left:117%">
-                 @auth
-                  <form action="{{route('logout')}}" method="POST">
-                    @csrf
-                    <ion-icon name="log-out-outline"><button type="submit" class="dropdown-item; text-dark">Logout</button></ion-icon>
-                  </form>
-                @endauth
-            </div>
-        </div>
-    </nav>
+
     
 
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light shadow bg-success">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="/">
+            <a class="navbar-brand text-white logo h1 align-self-center" href="/">
                 RiBook
             </a>
 
@@ -29,10 +18,10 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link text-white" href="/">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produk">Shop</a>
+                            <a class="nav-link text-white" href="{{url ('produk')}}">Toko</a>
                         </li>
                     </ul>
                 </div>

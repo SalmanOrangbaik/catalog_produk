@@ -13,7 +13,7 @@ class PenulisController extends Controller
      */
     public function index()
     {
-        $penulis = Penulis::all();
+        $penulis = Penulis::orderBy('id', 'desc')->get();
         return view('penulis.index', compact('penulis'));
     }
 

@@ -77,7 +77,7 @@
                                     <li class="text-muted text-right">{{ $data->harga }}</li>
                                 </ul>
                                 <a href="shop-single.html"
-                                    class="h2 text-decoration-none text-dark">{{ $data->nama_buku }}</a>
+                                    class="h2 text-decoration-none text-dark"><b>{{ $data->nama_buku }}</b></a>
                                 <p class="card-text">
                                     {!! $data->deskripsi ?? '' !!}
                                 </p>
