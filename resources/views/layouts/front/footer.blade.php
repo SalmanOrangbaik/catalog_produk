@@ -8,10 +8,6 @@
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        <p class="text-left text-dark">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                        </p>
                     </div>
                 </div>
             </div>
