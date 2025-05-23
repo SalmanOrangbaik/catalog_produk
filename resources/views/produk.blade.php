@@ -23,7 +23,6 @@
                                 </li>
                             @endforeach
 
-
                         </ul>
                     </li>
                     <li class="pb-3">

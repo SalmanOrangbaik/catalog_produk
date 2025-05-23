@@ -49,7 +49,7 @@
                                 <div class="row pb-3">
                                     <div class="col d-grid">
                                         @php
-                                            $wa = '081214819098';
+                                            $wa = '62081214819098';
                                             $pesan = "Halo, saya ingin beli buku $book->nama_buku (Harga: Rp $book->harga)";
                                             $url = 'https://wa.me/' . $wa . '?text=' . urlencode($pesan);
                                         @endphp

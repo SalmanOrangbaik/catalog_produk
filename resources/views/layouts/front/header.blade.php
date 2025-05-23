@@ -21,7 +21,7 @@
                             <a class="nav-link text-white" href="/">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{url ('produk')}}">Toko</a>
+                            <a class="nav-link text-white" href="{{url ('produk')}}">Produk</a>
                         </li>
                     </ul>
                 </div>
